@@ -4,7 +4,8 @@
             <h1>webbutveckling - Ramschema</h1>
             <form class="search-holder" (ngSubmit)="onSubmit()">
                 <label for="search" class="search-label">Sök här:</label>
-                <input type="search" id="search" name="search" placeholder="Sök här" [(ngModel)]="search">
+                <input type="search" id="search" name="search" placeholder="Sök här" [ngModel]='search'  
+                (ngModelChange)='onChange($event)'>
             </form>
             <div class="om-kurser">
                 <table id="kursData">
@@ -12,8 +13,8 @@
                         <tr class="thead">
                             <th class="code" (click)="sortBy('code')">Kurskod</th>
                             <th class="Kursnamn" (click)="sortBy('coursename')">Kursnamn</th>
-                            <th class="progression" (click)="sortBy('progression')">progression</th>
-                            <th class="kursNamn" (click)="sortBy('syllabus')">syllabus</th>
+                            <th class="progressionTH" (click)="sortBy('progression')">progression</th>
+                            <th class="kursNamn syllabus" (click)="sortBy('syllabus')">syllabus</th>
                         </tr>
                     </tbody>
                     <tbody>

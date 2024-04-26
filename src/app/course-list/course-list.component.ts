@@ -23,9 +23,16 @@ export class CourseListComponent {
 
   courses_list: Course[] = [];
   filteringCourses: Course[] = [];
-  search: string = '';
+  public search: string = '';
   constructor(private courseservice: CoursesService) {}
 
+  onChange(UpdatedValue : string) :void 
+  { 
+    this.search = UpdatedValue; 
+    this.onSubmit();
+    console.log(this.search);
+  } 
+  
   ngOnInit() {
     this.courseservice.getCourses().subscribe(data => {
       this.courses_list = data;

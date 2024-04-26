@@ -6,6 +6,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h1 {
+        padding: 1em 1em 0 1em;
+    }
     
     .search-holder {
         width: 100%;
@@ -35,12 +39,14 @@
     .om-kurser {
         margin-top: 1em;
         padding: 1em;
-        width: 60%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         max-width: 700px;
         background-color: ghostwhite;
         border-radius: 10px;
+
+        
     }
     
     #kursData {
@@ -49,6 +55,7 @@
         flex-direction: column;
         background-color: ghostwhite;
         border-radius: 10px;
+        
     }
     
     .thead {
@@ -86,16 +93,25 @@
     }
     
     .progression {
-        width: 10%;
+        width: 30%;
         text-align: center;
     }
     
     .kursNamn {
         width: 60%;
+
     }
 
-    .url {
-        text-align: center;
+    .url, .progressionTH  {
+        text-align: end;
+        width: 30%;
+
+        
+    }
+
+    .syllabus {
+        text-align: end;
+        width: 20%;
     }
     
     #code, #progression, #name {
@@ -127,10 +143,15 @@ footer {
     .om-kurser {
         width: 80%;
     }
+
+    #kursData {
+        overflow-x: auto !important;
+    }
 }
 @media screen and (max-width: 450px) {
     .om-kurser {
         width: 100%;
+        font-size: .75em;
     }
 
     .kursList {
