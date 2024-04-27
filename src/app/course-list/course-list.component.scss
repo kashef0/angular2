@@ -24,6 +24,8 @@
     #search {
         padding: 10px;
         width: 50%;
+        height: 3.5em;
+        border-radius: 5px;
     }
 
     .om-uppgiften h1 {
@@ -33,86 +35,47 @@
         padding: 1em;
     }
 
-
     .om-kurser {
-        margin-top: 1em;
-        padding: 1em;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        max-width: 850px;
-        background-color: ghostwhite;
-        border-radius: 10px;
-
-
+        overflow-x: auto;
     }
 
-    #kursData {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: ghostwhite;
-        border-radius: 10px;
-
-    }
-
-    .thead {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        padding: 1em;
-        border-radius: 10px;
-        text-decoration: underline;
+    table {
+        border-collapse: collapse;
+        border: 2px solid rgb(140 140 140);
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
         font-size: calc((1em + 2vw) / 2);
+        letter-spacing: 1px;
+        margin-top: 2em;
+
     }
 
-    .kursnamn_rubrik {
-        width: 45%;
-        text-align: start;
+    thead,
+    tfoot {
+        background-color: rgb(228 240 245);
     }
 
-    tbody {
-        display: flex;
-        flex-direction: column;
+    th,
+    td {
+        border: 1px solid rgb(160 160 160);
+        padding: 13px 10px;
     }
 
-    .kursList {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 1em;
-        background-color: white;
-        margin-bottom: .25em;
-        font-size: calc((1em + 2vw) / 2);
-    }
-
-    .kurskod {
-        width: 20%;
-        text-align: start;
-    }
-
-    .progression {
-        width: 30%;
+    td:last-of-type {
         text-align: center;
     }
 
-    .kursNamn {
-        width: 60%;
-
+    tbody>tr:nth-of-type(even) {
+        background-color: rgb(237 238 242);
     }
 
-    .url,
-    .progressionTH {
-        text-align: end;
-        width: 30%;
-
-
+    tfoot th {
+        text-align: right;
     }
 
-    .syllabus {
-        text-align: end;
-        width: 20%;
+    tfoot td {
+        font-weight: bold;
     }
 
     #code,
@@ -176,6 +139,7 @@ footer {
     .search-label {
         display: none;
     }
+
     #search {
         width: 90% !important;
     }
