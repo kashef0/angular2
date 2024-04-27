@@ -64,6 +64,7 @@
         padding: 1em;
         border-radius: 10px;
         text-decoration: underline;
+        font-size: calc((1em + 2vw) / 2);
     }
 
     .kursnamn_rubrik {
@@ -170,5 +171,12 @@ footer {
 
     .kursList {
         padding: .50em;
+    }
+
+    .search-label {
+        display: none;
+    }
+    #search {
+        width: 90%;
     }
 }
