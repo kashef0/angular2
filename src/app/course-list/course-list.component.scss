@@ -72,8 +72,17 @@
 
     tfoot th {
         text-align: right;
+        
     }
-
+    .code, .courseName, 
+    .progressionTH, .syllabus {
+        text-decoration: underline;
+        color: rgb(169, 31, 7);
+    }
+    
+    .progression {
+        text-align: center;
+    }
     tfoot td {
         font-weight: bold;
     }
